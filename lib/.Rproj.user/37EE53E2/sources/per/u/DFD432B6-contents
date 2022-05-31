@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------------- #
+# ClusterMatrix                                                                #
+# 2018/08/27                                                                   #
+# Ryan D. Crawford                                                             #
+# ---------------------------------------------------------------------------- #
+# This function takes a numeric matrix and clusters the matrix by the rows     #
+# and/or columns using the euclidean distances.                                #
+# ---------------------------------------------------------------------------- #
+
+ClusterMatrix = function(
+  mat,          # Numeric matrix 
+  clusterRows,  # Bool indicating whether rows should be clustered
+  clusterCols,  # Bool indicating whether cols should be clustered
+  hClustMethod, # The agglomeration method to be passed to "hClust"
+  distMethod    # Dstance measure to be used. ex "euclidean", "manhattan", ect
+  )
+{
+  # ---- Parse the command line arguments ------------------------------------ #
+  
+  if ( missing(hClustMethod) ) hClustMethod = "complete"
+  if ( missing(distMethod) )   distMethod   = "euclidean"
+  
+  # ---- Local Function Defintions ------------------------------------------- #
+
+  # Function to cluster the matrix 
+  ApplyClusterFunction = function( mat, distance, clustMethod )
+  {
+    # Create the distance matrix 
+    distMat = dist(mat, method = distance)
+    
+    # Use the distance matrix and apply the clustering function
+    return( hclust(distMat, clustMethod) )
+  }
+  
+  # ---- Apply function to find clusters and sort the matrix ----------------- #
+  
+  if (clusterRows) # If clustering by rows...
+  {
+    treeRow = ApplyClusterFunction(mat, distMethod, hClustMethod)
+    mat = mat[treeRow$order, , drop = FALSE]
+  }
+  
+  if (clusterCols) # If clustering by columns...
+  {
+    treeCol = ApplyClusterFunction(t(mat), distMethod, hClustMethod)
+    mat = mat[, treeCol$order, drop = FALSE]
+  }
+  
+  return(mat)
+}
+
+# ---------------------------------------------------------------------------- #

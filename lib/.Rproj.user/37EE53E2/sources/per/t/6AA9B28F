@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1616675267955.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "15|1|21|0|\n24|1|37|0|\n40|1|63|0|\n66|1|76|0|\n",
+    "hash" : "3213961917",
+    "id" : "6AA9B28F",
+    "lastKnownWriteTime" : 1616762685,
+    "last_content_update" : 1616770103349,
+    "path" : "~/gl/Bachman_CU8/lib/2021_03_25_blast_analysis.R",
+    "project_path" : "2021_03_25_blast_analysis.R",
+    "properties" : {
+        "cursorPosition" : "117,5",
+        "scrollLine" : "14",
+        "source_window_id" : "wej70klyjn9jx",
+        "tempName" : "Untitled2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

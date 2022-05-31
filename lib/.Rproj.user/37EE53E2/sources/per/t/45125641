@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1616675888138.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1484358627",
+    "id" : "45125641",
+    "lastKnownWriteTime" : 1616765940,
+    "last_content_update" : 1616765940875,
+    "path" : "~/gl/Bachman_CU8/lib/2021_03_25_plot_co_phylo.R",
+    "project_path" : "2021_03_25_plot_co_phylo.R",
+    "properties" : {
+        "cursorPosition" : "91,0",
+        "scrollLine" : "35",
+        "source_window_id" : "wej70klyjn9jx",
+        "tempName" : "Untitled3"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
